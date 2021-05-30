@@ -1,0 +1,30 @@
+<%- include("partials/headers.ejs",{home:"",subscribe:"current-menu-item",
+contact:"",about:""}) -%>
+<div class="background-image"></div>
+<div class=' formBody'>
+
+    <div class='header'>
+        <h1>Subscribe To Newsletter</h1>
+    </div>
+    <div class='fullForm'>
+        <form action='/subscribe' method='post'>
+            <div class='form-group label1'>
+                <label for='first-name'>Enter your first name *</label>
+                <input type='text' class='form-control' name='fName' id='first-name' required>
+            </div>
+            <div class='form-group label2'>
+                <label for='last-name'>Enter your last name *</label>
+                <input type='text' name='lName' class='form-control' id='last-name' required>
+            </div>
+            <div class='form-group label3'>
+                <label for='email'>Enter your Email *</label>
+                <input type='email' name='email' class="form-control" id="email" required>
+            </div>
+            <div class='submitButton'>
+                <button type='submit' class='btn btn-primary btn-lg'>Subscribe</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+<%- include("partials/footers.ejs") -%>

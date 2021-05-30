@@ -1,0 +1,32 @@
+<%- include("partials/headers",{home: '' ,subscribe:'',contact:"current-menu-item",about:''}) -%>
+    <div class="background-image"></div>
+    <!--Main Form-->
+    <div class=' formBody'>
+
+        <div class='header'>
+            <h1>Let's Talk</h1>
+        </div>
+        <div class='fullForm'>
+            <form action='/contact' method='post'>
+                <div class='form-group label1'>
+                    <label for='clientName'>Enter your name *</label>
+                    <input type='text' class='form-control' name='userName' id='clientName' required>
+                </div>
+                <div class='form-group label2'>
+                    <label for='clientEmail'>Enter your email *</label>
+                    <input type='email' name='userEmail' class='form-control' id='clientEmail' required>
+                </div>
+                <div class='form-group label3'>
+                    <label for='clientText'>Your message *</label>
+                    <textarea cols='23' rows='5' name='text' class='form-control' id='clientText' required
+                        autocomplete="off"></textarea>
+                </div>
+                <div class='submitButton'>
+                    <button type='submit' class='btn btn-primary btn-lg'>Send</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <%- include("partials/footers.ejs") -%>

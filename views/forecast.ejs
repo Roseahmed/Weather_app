@@ -1,0 +1,37 @@
+<%- include("partials/headers.ejs",{home: "current-menu-item",subscribe:'',contact:'',about:''}) -%>
+		<div class="hero">
+			<div class="container">
+				<form action="/" class="find-location" method="POST">
+					<input type="text" placeholder="Enter City Name..." name='cityName' required>
+					<input type="submit" value="Find">
+				</form>
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="forecast-container">
+				<div class="today forecast">
+					<div class="forecast-header">
+						<div class="day">Monday</div>
+						<div class="date">6 Oct</div>
+					</div> <!-- .forecast-header -->
+					<div class="forecast-content">
+						<div class="location"><%=location%></div>
+						<div class="degree">
+							<div id ='description'><%=description%></div>
+							<div class="num"><span class="temp"><%=temp%></span><sup>o</sup>C</div>
+							<div class="forecast-icon">
+								<img src="<%=weatherIcon%>" alt="" width=100>
+							</div>
+						</div>
+						<div class='details'>
+							<span>Real feel: <%=feelsLike%><sup>o</sup>C</span>
+							<span>Humidity: <%=humidity%>% </span>
+							<span id="windspeed">Wind speed: <%=windSpeed%> km/hr<span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+<%- include("partials/footers.ejs") -%>

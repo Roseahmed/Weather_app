@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+	<title>Weather App</title>
+
+	<!-- Loading third party fonts -->
+	
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Loading main css file -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+
+<body>
+
+	<div class="site-content">
+		<div class="site-header">
+			<div class="container">
+				<a href="/" class="branding">
+					<img src="/images/logo.png" alt="" class="logo">
+					<div class="logo-type">
+						<h1 class="site-title">Weather App</h1>
+						<small class="site-description">By Rose Ahmed</small>
+					</div>
+				</a>
+
+				<!-- Default snippet for navigation -->
+				<div class="main-navigation">
+					<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+					<ul class="menu">
+						<li class="menu-item current-menu-item"><a href="/">Home</a></li>
+						<li class="menu-item "><a href="/subscribe">Subscribe</a></li>
+						<li class="menu-item "><a href="/contact">Contact</a></li>
+						<li class="menu-item"><a href="/about">About</a></li>
+					</ul> <!-- .menu -->
+				</div> <!-- .main-navigation -->
+
+				<div class="mobile-navigation"></div>
+
+			</div>
+		</div> <!-- .site-header -->
+
+		<div class="hero">
+			<div class="container">
+				<form action="/" class="find-location" method="POST">
+					<input type="text" placeholder="Enter City Name..." name='cityName' required>
+					<input type="submit" value="Find">
+				</form>
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="forecast-container">
+				<div class="today forecast">
+					<div class="forecast-header">
+						<div class="day">Monday</div>
+						<div class="date">6 Oct</div>
+					</div> <!-- .forecast-header -->
+					<div class="forecast-content">
+						<div class="location">Assam</div>
+						<div class="degree">
+							<div id ='description'>Clear sky</div>
+							<div class="num"><span class=temp>25</span><sup>o</sup>C</div>
+							<div class="forecast-icon">
+								<img src="/images/icons/icon-2.svg" alt="" width=100>
+							</div>
+						</div>
+						
+						<div class="details">
+							<span>Real feel: 26<sup>o</sup>C</span>
+							<span>Humidity: 30%</span>
+							<span id='windspeed'>Wind speed: 1km/h</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="site-footer">
+			<!--<div class="container">-->
+				<div class="social-links">
+						<a href="https://www.facebook.com/rose.ahmed.560/" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/roseahmed54" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>
+	</div>
+	<div class='copyright'>
+		<p class="colophon">Copyright &copy 2021 Rose Ahmed. All rights reserved</p>
+	</div>
+	</footer> <!-- .site-footer -->
+	<div class='userConfirmation'><%=userConfirmation%></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="/js/script.js"></script>
+	<script src='/js/geolocation.js'></script>
+
+</body>
+
+</html>
