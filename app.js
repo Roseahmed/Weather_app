@@ -59,7 +59,7 @@ app.get('/weather/:lat/:long', (req, res) => {
             weatherData = JSON.parse(data);
           //  console.log(weatherData);
             const icon = weatherData.weather[0].icon;
-            let imageUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+            let imageUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
             res.render('forecast.ejs', {
                 userConfirmation: "", weatherIcon: imageUrl, location: weatherData.name,
                 temp: weatherData.main.temp, description: weatherData.weather[0].description,
@@ -83,7 +83,7 @@ app.get('/forecast', (req, res) => {
         userCityName = "guwahati";
         if (response.statusCode === 404) {
             const icon = weatherData.weather[0].icon;
-            const imageUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+            const imageUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
             res.render('forecast.ejs', {
                 userConfirmation: "invalidCityName", weatherIcon: imageUrl, location: weatherData.name,
                 temp: weatherData.main.temp, description: weatherData.weather[0].description,
@@ -96,7 +96,7 @@ app.get('/forecast', (req, res) => {
                 weatherData = JSON.parse(data);
              //   console.log(weatherData);
                 const icon = weatherData.weather[0].icon;
-                const imageUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+                const imageUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
                 res.render('forecast.ejs', {
                     userConfirmation: "", weatherIcon: imageUrl, location: weatherData.name,
                     temp: weatherData.main.temp, description: weatherData.weather[0].description,
