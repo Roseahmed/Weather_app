@@ -5,27 +5,36 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-    
+
 	<!--facebook meta data or open Graph tag-->
-    <meta property="fb:app_id" content="" /> 
-    <meta property="og:type" content="website"/> 
-    <meta property="og:url" content="https://rose-weather-forecast.herokuapp.com"/> 
-    <meta property="og:title" content="Weather Forecast App"/> 
-    <meta property="og:image" content="https://play-lh.googleusercontent.com/Gmcr_d0zuUzaY8UX0gMpxqABTzkE5ccmUQ2w_4mTCOGvVK9ETWXm6YGhWsQ_jhABBeIb=h250-rw"/> 
-    <meta property="og:description" content="You can get the weather forecast deatails of
-	any city or town or Latitude and Longitude and we can even subscribe and contact me."/>
+	<meta property="fb:app_id" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://rose-weather-forecast.herokuapp.com" />
+	<meta property="og:title" content="Weather Forecast App" />
+	<meta property="og:image"
+		content="https://play-lh.googleusercontent.com/Gmcr_d0zuUzaY8UX0gMpxqABTzkE5ccmUQ2w_4mTCOGvVK9ETWXm6YGhWsQ_jhABBeIb=h250-rw" />
+	<meta property="og:description" content="You can get the weather forecast deatails of
+	any city or town or Latitude and Longitude and we can even subscribe and contact me." />
 
 	<title>Weather App</title>
 
+	<!--favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
 	<!-- Loading third party fonts -->
-	
+
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 
 	<!-- Loading main css file -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="/css/style.css" type="text/css">
+
 
 </head>
 
@@ -58,54 +67,57 @@
 
 			</div>
 		</div> <!-- .site-header -->
+	</div>
 
-		<div class="hero">
-			<div class="container">
-				<form action="/" class="find-location" method="POST">
-					<input type="text" placeholder="Enter City Name..." name='cityName' required>
-					<input type="submit" value="Find">
-				</form>
-
-			</div>
-		</div>
+	<div class="hero">
 		<div class="container">
-			<div class="forecast-container">
-				<div class="today forecast">
-					<div class="forecast-header">
-						<div class="day">Monday</div>
-						<div class="date">6 Oct</div>
-					</div> <!-- .forecast-header -->
-					<div class="forecast-content">
-						<div class="location">Assam</div>
-						<div class="degree">
-							<div id ='description'>Clear sky</div>
-							<div class="num"><span class=temp>25</span><sup>o</sup>C</div>
-							<div class="forecast-icon">
-								<img src="/images/icons/icon-2.svg" alt="" width=100>
-							</div>
+			<form action="/" class="find-location" method="POST">
+				<input type="text" placeholder="Enter City Name..." name='cityName' required>
+				<input type="submit" value="Find">
+			</form>
+
+		</div>
+	</div>
+	<div class="container">
+		<div class="forecast-container">
+			<div class="today forecast">
+				<div class="forecast-header">
+					<div class="day">Monday</div>
+					<div class="date">6 Oct</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="location">Assam</div>
+					<div class="degree">
+						<div id='description'>Clear sky</div>
+						<div class="num"><span class=temp>25</span><sup>o</sup>C</div>
+						<div class="forecast-icon">
+							<img src="/images/icons/icon-2.svg" alt="" width=100>
 						</div>
-						
-						<div class="details">
-							<span>Real feel: 26<sup>o</sup>C</span>
-							<span>Humidity: 30%</span>
-							<span id='windspeed'>Wind speed: 1km/h</span>
-						</div>
+					</div>
+
+					<div class="details">
+						<span>Real feel: 26<sup>o</sup>C</span>
+						<span>Humidity: 30%</span>
+						<span id='windspeed'>Wind speed: 1km/h</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<footer class="site-footer">
-			<!--<div class="container">-->
-				<div class="social-links">
-						<a href="https://www.facebook.com/rose.ahmed.560/" target="_blank"><i class="fa fa-facebook"></i></a>
-						<a href="https://twitter.com/roseahmed54" target="_blank"><i class="fa fa-twitter"></i></a>
-				</div>
 	</div>
-	<div class='copyright'>
-		<p class="colophon">Copyright &copy 2021 Rose Ahmed. All rights reserved</p>
-	</div>
+	<footer class="site-footer">
+		<!--<div class="container">-->
+		<div class="social-links-header">Follow Us</div>
+		<div class="social-links">
+			<a href="https://www.facebook.com/rose.ahmed.560/" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/roseahmed54" target="_blank"><i class="fa fa-twitter"></i></a>
+		</div>
+		<div class='copyright'>
+			<p class="colophon">Copyright &copy 2021 Rose Ahmed. All rights reserved</p>
+		</div>
 	</footer> <!-- .site-footer -->
-	<div class='userConfirmation'><%=userConfirmation%></div>
+	<div class='userConfirmation'>
+		<%=userConfirmation%>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="/js/script.js"></script>

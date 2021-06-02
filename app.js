@@ -46,18 +46,18 @@ app.post('/', (req, res) => {
     res.redirect('/forecast');
 });
 
-app.get('/weather/:lat/:long', (req, res) => {
+app.get('/forecast/:lat/:long', (req, res) => {
 
-    console.log(req.params);
+    //console.log(req.params);
     const latitude = (req.params.lat);
     const longitude = (req.params.long);
     const parameters = `?lat=${latitude}&lon=${longitude}&units=metric&appid=`;
     const url = weatherApiEndpoints + parameters + WEATHER_API_KEY;
     https.get(url, (response) => {
-        console.log("Weather route response_code: " + response.statusCode);
+        console.log("Forecast route by latitude&longitude response_code: " + response.statusCode);
         response.on('data', (data) => {
             weatherData = JSON.parse(data);
-          //  console.log(weatherData);
+            //  console.log(weatherData);
             const icon = weatherData.weather[0].icon;
             let imageUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
             res.render('forecast.ejs', {
@@ -79,7 +79,7 @@ app.get('/forecast', (req, res) => {
     const parameters = `?q=${userCityName}&units=metric&appid=`;
     const url = weatherApiEndpoints + parameters + WEATHER_API_KEY;
     https.get(url, (response) => {
-        console.log("Forecast route response_code: " + response.statusCode);
+        console.log("Forecast route by city response_code: " + response.statusCode);
         userCityName = "guwahati";
         if (response.statusCode === 404) {
             const icon = weatherData.weather[0].icon;
@@ -94,7 +94,7 @@ app.get('/forecast', (req, res) => {
         } else {
             response.on('data', (data) => {
                 weatherData = JSON.parse(data);
-             //   console.log(weatherData);
+                //   console.log(weatherData);
                 const icon = weatherData.weather[0].icon;
                 const imageUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
                 res.render('forecast.ejs', {
@@ -198,7 +198,7 @@ app.get("/about", (req, res) => {
 
 //Invalid route
 app.get('*', (req, res) => {
-    res.send("404 No Page Found");
+    res.send("<h1>404 No Page Found<h1>");
 });
 
 app.listen(port, function () {

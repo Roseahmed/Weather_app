@@ -5,7 +5,7 @@ if('geolocation'in navigator){
         const lat = position.coords.latitude;
         const long = position.coords.longitude;
         console.log(lat,long);
-        location=`/weather/${lat}/${long}`;
+        location=`/forecast/${lat}/${long}`;
     },function(error){
         console.log(error);
         if(error.code===1){

@@ -495,7 +495,7 @@ form textarea {
  */
 .site-footer {
   background: #262936;
-  padding: 50px 0;
+  padding: 20px 0;
   text-align:center;
 }
 .site-footer .social-links a {
@@ -520,6 +520,9 @@ form textarea {
     }
     .userConfirmation{
       display: none;
+    }
+    .social-links-header{
+      padding-bottom: 10px;
     }
     
 /*contact page css*/
