@@ -38,15 +38,16 @@
 		}else if($(".userConfirmation").text()==="invalidCityName"){
 			alert("Invalid city name");
 			$(".userConfirmation").empty();
-		}else if($(".userConfiramtion").text()=="apierror"){
+		}else if($(".userConfiramtion").text()==="apierror"){
 			alert("Something went wrong!!!");
 			$(".userConfirmation").empty();
-		}else if($(".userConfirmation").text()=="subscribed"){
+		}else if($(".userConfirmation").text()==="subscribed"){
 			alert("Subscribed");
 			$(".userConfirmation").empty();
-		}else if($(".userConfirmation").text()=="wrong"){
+		}else if($(".userConfirmation").text()==="wrong"){
 			alert("Something went wrong please try again with different email id!!!");
 			$(".userConfirmation").empty();
 		}
+
 	},1000);
     
